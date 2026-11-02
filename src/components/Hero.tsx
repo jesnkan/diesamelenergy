@@ -220,9 +220,9 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
                 zIndex: 2,
               }}
             >
-              {/* PHOTOREALISTIC SOLAR, WIND & FUEL INDUSTRIAL IMAGE */}
+              {/* CUSTOM HERO IMAGE */}
               <img
-                src="/images/solar-wind-fuel-energy.jpg"
+                src="/images/hero%20image.png"
                 alt="Diesamel multi-source energy infrastructure: commercial solar panels, industrial wind turbines, and bulk fuel tanker logistics"
                 style={{
                   width: '100%',
