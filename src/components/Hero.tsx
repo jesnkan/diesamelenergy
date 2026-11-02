@@ -222,7 +222,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
             >
               {/* CUSTOM HERO IMAGE */}
               <img
-                src="/images/hero%20image.png"
+                src="/images/hero%20image.jpg"
                 alt="Diesamel multi-source energy infrastructure: commercial solar panels, industrial wind turbines, and bulk fuel tanker logistics"
                 style={{
                   width: '100%',
