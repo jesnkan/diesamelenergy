@@ -53,7 +53,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
             <span style={{ color: '#475569' }}>
-              General Contact Line: <a href="tel:+2332623810175" style={{ color: '#0F172A', fontWeight: 700, textDecoration: 'none' }}>+233 26 238 10175</a>
+              General Contact Line: <a href="tel:+233262381017" style={{ color: '#0F172A', fontWeight: 700, textDecoration: 'none' }}>+233 26 238 1017</a>
             </span>
             <span style={{ fontSize: '0.68rem', padding: '0.15rem 0.6rem', backgroundColor: '#FFF7ED', border: '1px solid #FFEDD5', borderRadius: '9999px', color: '#E05A1B', fontWeight: 700 }}>
               OFFICIAL LINE
@@ -78,24 +78,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
         <div className="de-container-wide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '76px' }}>
           
           {/* Brand Logo */}
-          <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.9rem', textDecoration: 'none' }}>
-            <div style={{
-              width: '42px',
-              height: '42px',
-              backgroundColor: '#0A0F1D',
-              border: '1px solid #0A0F1D',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: '3px',
-              boxShadow: '0 2px 8px rgba(10, 15, 29, 0.15)'
-            }}>
-              <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 8 L24 8 C32 8 35 14 35 20 C35 26 32 32 24 32 L10 32 Z" stroke="#FFFFFF" strokeWidth="2.5" strokeLinejoin="round"/>
-                <path d="M17 14 L24 14 C27.5 14 29 17 29 20 C29 23 27.5 26 24 26 L17 26 Z" fill="#1E293B" stroke="#CBD5E1" strokeWidth="1.8"/>
-                <line x1="17" y1="8" x2="17" y2="32" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="square"/>
-              </svg>
-            </div>
+          <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', textDecoration: 'none' }}>
+            <img
+              src="/images/DIESAMEL.png"
+              alt="Diesamel Energy Ltd. Logo"
+              style={{
+                height: '46px',
+                width: 'auto',
+                objectFit: 'contain',
+                display: 'block',
+              }}
+            />
             <div>
               <div style={{
                 fontFamily: 'var(--font-sans)',
@@ -253,7 +246,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
               </div>
               <div>Ho Industrial Corridor • Near UHAS Road Junction</div>
               <div style={{ marginTop: '0.4rem', color: '#0A0F1D', fontWeight: 600 }}>dispatch@diesamelenergy.com</div>
-              <div style={{ marginTop: '0.2rem', color: '#0A0F1D', fontWeight: 700 }}>Tel: +233 26 238 10175</div>
+              <div style={{ marginTop: '0.2rem', color: '#0A0F1D', fontWeight: 700 }}>Tel: +233 26 238 1017</div>
               <div style={{ marginTop: '0.2rem' }}>Fleet Ops: 24/7/365 active</div>
             </div>
 

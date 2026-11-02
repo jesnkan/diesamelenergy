@@ -20,24 +20,17 @@ export const Footer: React.FC = () => {
         >
           {/* Brand Column */}
           <div style={{ maxWidth: '380px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.9rem', marginBottom: '1.25rem' }}>
-              <div style={{
-                width: '42px',
-                height: '42px',
-                backgroundColor: '#0A0F1D',
-                border: '1px solid #0A0F1D',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: '3px',
-                boxShadow: '0 2px 8px rgba(10, 15, 29, 0.15)'
-              }}>
-                <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10 8 L24 8 C32 8 35 14 35 20 C35 26 32 32 24 32 L10 32 Z" stroke="#FFFFFF" strokeWidth="2.5" strokeLinejoin="round"/>
-                  <path d="M17 14 L24 14 C27.5 14 29 17 29 20 C29 23 27.5 26 24 26 L17 26 Z" fill="#1E293B" stroke="#CBD5E1" strokeWidth="1.8"/>
-                  <line x1="17" y1="8" x2="17" y2="32" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="square"/>
-                </svg>
-              </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', marginBottom: '1.25rem' }}>
+              <img
+                src="/images/DIESAMEL.png"
+                alt="Diesamel Energy Ltd. Logo"
+                style={{
+                  height: '46px',
+                  width: 'auto',
+                  objectFit: 'contain',
+                  display: 'block',
+                }}
+              />
               <div>
                 <div style={{ fontFamily: 'var(--font-sans)', fontWeight: 800, fontSize: '1.25rem', letterSpacing: '-0.02em', color: '#0A0F1D' }}>
                   DIESAMEL
@@ -106,7 +99,7 @@ export const Footer: React.FC = () => {
                   TELEPHONE CONTACT
                 </span>
                 <div style={{ color: '#0A0F1D', marginTop: '0.15rem', fontWeight: 700 }}>
-                  <a href="tel:+2332623810175" style={{ color: '#0A0F1D', textDecoration: 'none' }}>+233 26 238 10175</a>
+                  <a href="tel:+233262381017" style={{ color: '#0A0F1D', textDecoration: 'none' }}>+233 26 238 1017</a>
                 </div>
               </div>
 

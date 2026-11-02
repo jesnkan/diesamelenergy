@@ -161,8 +161,8 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
                 <div style={{ fontSize: '0.72rem', fontFamily: 'var(--font-mono)', color: '#64748B', fontWeight: 600 }}>
                   GENERAL CONTACT &amp; FLEET DISPATCH LINE
                 </div>
-                <a href="tel:+2332623810175" style={{ fontSize: '1.15rem', color: '#0A0F1D', fontFamily: 'var(--font-mono)', fontWeight: 800, textDecoration: 'none' }}>
-                  +233 26 238 10175
+                <a href="tel:+233262381017" style={{ fontSize: '1.15rem', color: '#0A0F1D', fontFamily: 'var(--font-mono)', fontWeight: 800, textDecoration: 'none' }}>
+                  +233 26 238 1017
                 </a>
               </div>
               <div>
