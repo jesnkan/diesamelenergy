@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://diesamelenergy.com/sitemap.xml
