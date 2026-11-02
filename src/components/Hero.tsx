@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ArrowUpRight, ShieldCheck, Zap, Fuel, Navigation, Sun, Wind } from 'lucide-react';
+import { ArrowUpRight, Zap, Fuel, Navigation, Sun } from 'lucide-react';
 import { gsap } from 'gsap';
 
 interface HeroProps {
@@ -19,38 +19,32 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
       const ctx = gsap.context(() => {
         gsap.fromTo(
           '.hero-line',
-          { y: 50, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1, stagger: 0.16, ease: 'power3.out', delay: 0.15 }
+          { y: 40, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.9, stagger: 0.12, ease: 'power3.out', delay: 0.1 }
         );
 
         gsap.fromTo(
           '.hero-subtext',
-          { y: 25, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.85, ease: 'power2.out', delay: 0.6 }
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out', delay: 0.5 }
         );
 
         gsap.fromTo(
           '.hero-cta-group',
-          { y: 25, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out', delay: 0.75 }
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out', delay: 0.65 }
         );
 
         gsap.fromTo(
           imageFrameRef.current,
-          { scale: 0.95, opacity: 0, x: -30 },
-          { scale: 1, opacity: 1, x: 0, duration: 1.2, ease: 'power3.out', delay: 0.3 }
-        );
-
-        gsap.fromTo(
-          '.hero-accent-shape',
-          { scale: 0.8, opacity: 0 },
-          { scale: 1, opacity: 1, duration: 1, ease: 'back.out(1.5)', delay: 0.65 }
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 1, ease: 'power3.out', delay: 0.25 }
         );
 
         gsap.fromTo(
           '.hero-metric-item',
-          { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.7, stagger: 0.1, ease: 'power2.out', delay: 0.85 }
+          { y: 15, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.6, stagger: 0.08, ease: 'power2.out', delay: 0.75 }
         );
       }, heroRef);
 
@@ -67,54 +61,22 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        backgroundColor: '#F8FAFC',
+        backgroundColor: '#FFFFFF',
         overflow: 'hidden',
         borderBottom: '1px solid #E2E8F0',
       }}
     >
-      {/* Background Architectural Subtle Light Grid */}
+      {/* Background Architectural Grid */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
           backgroundImage:
-            'linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px), linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px)',
-          backgroundSize: '56px 56px',
+            'linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px)',
+          backgroundSize: '60px 60px',
           pointerEvents: 'none',
         }}
       />
-
-      {/* Floating Decorative Cross Elements in Ambient Canvas */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '12%',
-          right: '8%',
-          color: '#E05A1B',
-          fontSize: '1.2rem',
-          fontWeight: 700,
-          userSelect: 'none',
-          pointerEvents: 'none',
-          opacity: 0.75,
-        }}
-      >
-        ✕
-      </div>
-      <div
-        style={{
-          position: 'absolute',
-          top: '38%',
-          right: '18%',
-          color: '#475569',
-          fontSize: '1rem',
-          fontWeight: 700,
-          userSelect: 'none',
-          pointerEvents: 'none',
-          opacity: 0.6,
-        }}
-      >
-        ✕
-      </div>
 
       {/* Main Hero Container */}
       <div
@@ -122,203 +84,84 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
         style={{
           position: 'relative',
           zIndex: 10,
-          paddingTop: 'clamp(2.5rem, 5vw, 4.5rem)',
-          paddingBottom: 'clamp(2.5rem, 4.5vw, 4rem)',
-          maxWidth: '1540px',
+          paddingTop: 'clamp(3rem, 6vw, 5.5rem)',
+          paddingBottom: 'clamp(2.5rem, 5vw, 4.5rem)',
+          maxWidth: '1440px',
         }}
       >
         <div
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
-            gap: 'clamp(2.5rem, 5vw, 5rem)',
+            gap: 'clamp(2.5rem, 5vw, 4.5rem)',
             alignItems: 'center',
           }}
         >
-          {/* LEFT COLUMN: Organic Shaped Frame with Solar, Wind & Fuel Photography */}
+          {/* LEFT: Authentic Industrial Photography */}
           <div
             ref={imageFrameRef}
             style={{
               position: 'relative',
               width: '100%',
-              maxWidth: '680px',
               margin: '0 auto',
             }}
           >
-            {/* Top Dot Grid Matrix */}
-            <div
-              className="hero-accent-shape"
-              style={{
-                position: 'absolute',
-                top: '-20px',
-                right: '40px',
-                display: 'grid',
-                gridTemplateColumns: 'repeat(5, 7px)',
-                gap: '10px',
-                zIndex: 1,
-              }}
-            >
-              {[...Array(20)].map((_, i) => (
-                <span
-                  key={i}
-                  style={{
-                    width: '5px',
-                    height: '5px',
-                    borderRadius: '50%',
-                    backgroundColor: i < 10 ? '#E05A1B' : '#94A3B8',
-                    opacity: 0.85,
-                    display: 'inline-block',
-                  }}
-                />
-              ))}
-            </div>
-
-            {/* Energetic Orange Curved Accent Ribbon */}
-            <div
-              className="hero-accent-shape"
-              style={{
-                position: 'absolute',
-                bottom: '-20px',
-                right: '10%',
-                width: 'clamp(180px, 24vw, 280px)',
-                height: 'clamp(60px, 8vw, 86px)',
-                borderRadius: '9999px',
-                backgroundColor: '#E05A1B',
-                transform: 'rotate(-16deg)',
-                zIndex: 1,
-                boxShadow: '0 16px 36px rgba(224, 90, 27, 0.32)',
-              }}
-            />
-
-            {/* Dashed Concentric Circle Detail */}
-            <div
-              className="hero-accent-shape"
-              style={{
-                position: 'absolute',
-                bottom: '15px',
-                right: '20%',
-                width: '90px',
-                height: '90px',
-                borderRadius: '50%',
-                border: '2px dashed rgba(224, 90, 27, 0.6)',
-                zIndex: 4,
-                pointerEvents: 'none',
-              }}
-            />
-
-            {/* The Main Organic Masked Image Container */}
             <div
               style={{
                 position: 'relative',
                 width: '100%',
-                height: 'clamp(400px, 48vw, 540px)',
-                borderRadius: '32px 160px 48px 180px',
+                height: 'clamp(400px, 46vw, 520px)',
+                borderRadius: '8px',
                 overflow: 'hidden',
-                boxShadow: '0 24px 60px rgba(15, 23, 42, 0.14), 0 2px 8px rgba(15, 23, 42, 0.08)',
-                border: '2px solid #FFFFFF',
+                boxShadow: '0 20px 45px rgba(15, 23, 42, 0.10)',
+                border: '1px solid #CBD5E1',
                 backgroundColor: '#F1F5F9',
-                zIndex: 2,
               }}
             >
-              {/* CUSTOM HERO IMAGE */}
               <img
                 src="/images/hero%20image.jpg"
-                alt="Diesamel multi-source energy infrastructure: commercial solar panels, industrial wind turbines, and bulk fuel tanker logistics"
+                alt="Diesamel Energy Ltd. commercial energy infrastructure: solar microgrids, wind power, and heavy bulk petroleum logistics"
                 style={{
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
                   objectPosition: 'center 45%',
-                  transition: 'transform 1.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                  transition: 'transform 1.2s cubic-bezier(0.16, 1, 0.3, 1)',
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.04)')}
+                onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.025)')}
                 onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
               />
 
-              {/* Top-Left Verification Tag (Away from bottom-left organic curve) */}
+              {/* Bottom Caption Strip */}
               <div
                 style={{
                   position: 'absolute',
-                  top: '20px',
-                  left: '24px',
-                  padding: '0.45rem 1rem',
-                  backgroundColor: 'rgba(10, 15, 29, 0.82)',
-                  backdropFilter: 'blur(10px)',
-                  borderRadius: '9999px',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.55rem',
-                  zIndex: 4,
-                  boxShadow: '0 4px 15px rgba(0, 0, 0, 0.25)',
-                }}
-              >
-                <span
-                  style={{
-                    width: '7px',
-                    height: '7px',
-                    borderRadius: '50%',
-                    backgroundColor: '#E05A1B',
-                    boxShadow: '0 0 8px rgba(224, 90, 27, 0.8)',
-                  }}
-                />
-                <span
-                  style={{
-                    color: '#FFFFFF',
-                    fontSize: '0.74rem',
-                    fontFamily: 'var(--font-mono)',
-                    fontWeight: 700,
-                    letterSpacing: '0.04em',
-                  }}
-                >
-                  SOLAR • WIND • FUEL LOGISTICS
-                </span>
-              </div>
-
-              {/* Bottom Infrastructure Card - Offset to clear the 180px bottom-left curve completely */}
-              <div
-                style={{
-                  position: 'absolute',
-                  bottom: '20px',
-                  left: 'clamp(5.5rem, 9vw, 9.5rem)',
-                  right: '20px',
-                  padding: '0.9rem 1.35rem',
-                  background: 'rgba(10, 15, 29, 0.90)',
-                  backdropFilter: 'blur(12px)',
-                  borderRadius: '14px',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  padding: '1.25rem 1.6rem',
+                  background: 'linear-gradient(180deg, transparent 0%, rgba(10, 15, 29, 0.92) 100%)',
                   color: '#FFFFFF',
                   display: 'flex',
                   justifyContent: 'space-between',
-                  alignItems: 'center',
-                  flexWrap: 'wrap',
-                  gap: '0.65rem',
-                  zIndex: 3,
-                  boxShadow: '0 10px 25px rgba(0, 0, 0, 0.35)',
+                  alignItems: 'flex-end',
                 }}
               >
                 <div>
                   <div
                     style={{
                       fontFamily: 'var(--font-mono)',
-                      fontSize: '0.68rem',
+                      fontSize: '0.72rem',
                       letterSpacing: '0.12em',
                       color: '#FED7AA',
                       fontWeight: 700,
                       textTransform: 'uppercase',
                     }}
                   >
-                    TRI-ENERGY INFRASTRUCTURE
+                    INTEGRATED ENERGY ASSETS
                   </div>
-                  <div
-                    style={{
-                      fontSize: 'clamp(0.88rem, 1.1vw, 1.02rem)',
-                      fontWeight: 800,
-                      marginTop: '0.15rem',
-                      color: '#FFFFFF',
-                    }}
-                  >
-                    Solar • Wind • Bulk Petroleum Logistics
+                  <div style={{ fontSize: '1rem', fontWeight: 700, marginTop: '0.2rem', color: '#FFFFFF' }}>
+                    Solar • Wind • Bulk Petroleum Haulage
                   </div>
                 </div>
 
@@ -326,8 +169,8 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
                   style={{
                     padding: '0.3rem 0.75rem',
                     backgroundColor: '#E05A1B',
-                    borderRadius: '9999px',
-                    fontSize: '0.68rem',
+                    borderRadius: '4px',
+                    fontSize: '0.7rem',
                     fontFamily: 'var(--font-mono)',
                     fontWeight: 700,
                     letterSpacing: '0.04em',
@@ -338,47 +181,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
                 </div>
               </div>
             </div>
-
-            {/* Overlapping Deep Terracotta Circle Accent */}
-            <div
-              className="hero-accent-shape"
-              style={{
-                position: 'absolute',
-                right: '-32px',
-                top: '44%',
-                transform: 'translateY(-50%)',
-                width: 'clamp(130px, 15vw, 190px)',
-                height: 'clamp(130px, 15vw, 190px)',
-                borderRadius: '50%',
-                backgroundColor: '#A13812',
-                zIndex: 3,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: '0 16px 36px rgba(161, 56, 18, 0.35)',
-              }}
-            >
-              {/* Row of 6 small outline rings matching design */}
-              <div style={{ display: 'flex', gap: '7px' }}>
-                {[...Array(6)].map((_, i) => (
-                  <span
-                    key={i}
-                    style={{
-                      width: '6px',
-                      height: '6px',
-                      borderRadius: '50%',
-                      border: '1.8px solid rgba(255, 255, 255, 0.75)',
-                      display: 'inline-block',
-                    }}
-                  />
-                ))}
-              </div>
-            </div>
           </div>
 
-          {/* RIGHT COLUMN: Editorial Typography & Conversion CTAs */}
+          {/* RIGHT: Corporate Value Proposition */}
           <div style={{ maxWidth: '640px' }}>
-            {/* Brand Eyebrow */}
             <div
               className="hero-subtext"
               style={{
@@ -400,31 +206,27 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
                   height: '8px',
                   borderRadius: '50%',
                   backgroundColor: '#E05A1B',
-                  boxShadow: '0 0 10px rgba(224, 90, 27, 0.6)',
                 }}
               />
-              VOLTA REGION SOLAR, WIND & INDUSTRIAL FUEL
+              VOLTA REGION BULK FUEL &amp; INDUSTRIAL POWER
             </div>
 
-            {/* Display Headline in Warm Terracotta Orange */}
-            <div style={{ marginBottom: '1.85rem' }}>
+            {/* Display Headline */}
+            <div style={{ marginBottom: '1.75rem' }}>
               <h1
                 style={{
-                  fontSize: 'clamp(2.7rem, 4.8vw, 4.8rem)',
-                  lineHeight: 1.05,
+                  fontSize: 'clamp(2.4rem, 4.4vw, 4.2rem)',
+                  lineHeight: 1.08,
                   fontWeight: 800,
                   letterSpacing: '-0.035em',
-                  color: '#D9531E',
+                  color: '#0A0F1D',
                 }}
               >
                 <span className="hero-line" style={{ display: 'block' }}>
-                  Solar, Wind & Fuel.
+                  Continuous Energy to
                 </span>
-                <span className="hero-line" style={{ display: 'block' }}>
-                  The power that’s
-                </span>
-                <span className="hero-line" style={{ display: 'block' }}>
-                  always there.
+                <span className="hero-line" style={{ display: 'block', color: '#E05A1B' }}>
+                  Fuel Heavy Operations.
                 </span>
               </h1>
             </div>
@@ -433,16 +235,15 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
             <p
               className="hero-subtext"
               style={{
-                fontFamily: 'var(--font-sans)',
-                fontSize: 'clamp(1.05rem, 1.3vw, 1.25rem)',
+                fontFamily: 'var(--font-body)',
+                fontSize: 'clamp(1.02rem, 1.25vw, 1.18rem)',
                 lineHeight: 1.65,
                 color: '#475569',
                 maxWidth: '580px',
                 marginBottom: '2.5rem',
-                fontWeight: 400,
               }}
             >
-              Direct-to-site bulk diesel distribution, commercial solar arrays, and heavy-duty industrial standby power based in Ho, Ghana. Powering agribusinesses, quarries, processing facilities, and regional institutions across Volta, Oti, and Greater Accra.
+              Direct-to-site bulk diesel distribution, commercial solar installations, and heavy-duty industrial standby power based in Ho, Ghana. Powering agribusinesses, quarries, processing facilities, and regional institutions across Volta, Oti, and Greater Accra.
             </p>
 
             {/* Action Buttons */}
@@ -452,47 +253,47 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
                 display: 'flex',
                 alignItems: 'center',
                 flexWrap: 'wrap',
-                gap: '1.25rem',
-                marginBottom: '3rem',
+                gap: '1.1rem',
+                marginBottom: '2.75rem',
               }}
             >
               <button
                 onClick={onExploreOperations}
-                className="btn-pill-orange"
-                style={{ fontSize: '0.96rem', padding: '1.05rem 2.6rem' }}
+                className="btn-primary"
+                style={{ fontSize: '0.94rem', padding: '0.95rem 2.2rem' }}
               >
                 <span>EXPLORE OPERATIONS</span>
-                <ArrowUpRight size={18} />
+                <ArrowUpRight size={17} />
               </button>
 
               <button
                 onClick={onContactDispatch}
                 className="btn-secondary"
-                style={{ fontSize: '0.96rem', padding: '1.05rem 2.2rem' }}
+                style={{ fontSize: '0.94rem', padding: '0.95rem 2rem' }}
               >
                 <span>CORPORATE DIRECTORY</span>
-                <ArrowUpRight size={17} style={{ color: '#E05A1B' }} />
+                <ArrowUpRight size={16} style={{ color: '#0A0F1D' }} />
               </button>
             </div>
 
-            {/* Corporate Domain Reference */}
+            {/* Corporate Location */}
             <div
               className="hero-subtext"
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '1.25rem',
+                gap: '1rem',
                 fontFamily: 'var(--font-mono)',
-                fontSize: '0.82rem',
-                fontWeight: 700,
+                fontSize: '0.78rem',
+                fontWeight: 600,
                 color: '#64748B',
-                letterSpacing: '0.12em',
+                letterSpacing: '0.08em',
                 textTransform: 'uppercase',
               }}
             >
-              <span>WWW.DIESAMELENERGY.COM</span>
-              <span style={{ width: '5px', height: '5px', borderRadius: '50%', backgroundColor: '#E05A1B' }} />
-              <span>COMMERCIAL LIGHT INDUSTRIAL ZONE • HO</span>
+              <span>DIESAMELENERGY.COM</span>
+              <span style={{ width: '4px', height: '4px', borderRadius: '50%', backgroundColor: '#CBD5E1' }} />
+              <span>COMMERCIAL LIGHT INDUSTRIAL ZONE, HO</span>
             </div>
           </div>
         </div>
@@ -504,8 +305,8 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
           position: 'relative',
           zIndex: 10,
           borderTop: '1px solid #E2E8F0',
-          backgroundColor: '#FFFFFF',
-          padding: '1.75rem 0',
+          backgroundColor: '#F8FAFC',
+          padding: '1.5rem 0',
         }}
       >
         <div className="de-container-wide">
@@ -521,12 +322,12 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
             <div className="hero-metric-item" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.85rem' }}>
               <div
                 style={{
-                  padding: '0.65rem',
-                  backgroundColor: '#FFF7ED',
-                  borderRadius: '9999px',
-                  color: '#E05A1B',
-                  border: '1px solid #FFEDD5',
-                  boxShadow: '0 1px 3px rgba(224, 90, 27, 0.12)',
+                  padding: '0.6rem',
+                  backgroundColor: '#FFFFFF',
+                  borderRadius: '4px',
+                  color: '#0A0F1D',
+                  border: '1px solid #CBD5E1',
+                  boxShadow: '0 1px 2px rgba(0,0,0,0.04)',
                 }}
               >
                 <Navigation size={18} />
@@ -542,7 +343,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
                     fontWeight: 600,
                   }}
                 >
-                  STRATEGIC BASE
+                  OPERATIONAL HUB
                 </div>
                 <div style={{ fontSize: '0.94rem', fontWeight: 700, color: '#0A0F1D', marginTop: '0.15rem' }}>
                   Commercial Industrial Zone, Ho Hub
@@ -554,12 +355,12 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
             <div className="hero-metric-item" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.85rem' }}>
               <div
                 style={{
-                  padding: '0.65rem',
-                  backgroundColor: '#FFF7ED',
-                  borderRadius: '9999px',
-                  color: '#E05A1B',
-                  border: '1px solid #FFEDD5',
-                  boxShadow: '0 1px 3px rgba(224, 90, 27, 0.12)',
+                  padding: '0.6rem',
+                  backgroundColor: '#FFFFFF',
+                  borderRadius: '4px',
+                  color: '#0A0F1D',
+                  border: '1px solid #CBD5E1',
+                  boxShadow: '0 1px 2px rgba(0,0,0,0.04)',
                 }}
               >
                 <Sun size={18} />
@@ -575,7 +376,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
                     fontWeight: 600,
                   }}
                 >
-                  SOLAR &amp; WIND SOLUTIONS
+                  SOLAR &amp; RENEWABLES
                 </div>
                 <div style={{ fontSize: '0.94rem', fontWeight: 700, color: '#0A0F1D', marginTop: '0.15rem' }}>
                   Commercial PV &amp; Microgrid Arrays
@@ -587,12 +388,12 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
             <div className="hero-metric-item" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.85rem' }}>
               <div
                 style={{
-                  padding: '0.65rem',
-                  backgroundColor: '#FFF7ED',
-                  borderRadius: '9999px',
-                  color: '#E05A1B',
-                  border: '1px solid #FFEDD5',
-                  boxShadow: '0 1px 3px rgba(224, 90, 27, 0.12)',
+                  padding: '0.6rem',
+                  backgroundColor: '#FFFFFF',
+                  borderRadius: '4px',
+                  color: '#0A0F1D',
+                  border: '1px solid #CBD5E1',
+                  boxShadow: '0 1px 2px rgba(0,0,0,0.04)',
                 }}
               >
                 <Fuel size={18} />
@@ -608,7 +409,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
                     fontWeight: 600,
                   }}
                 >
-                  BULK PETROLEUM FLEET
+                  BULK FLEET CAPACITY
                 </div>
                 <div style={{ fontSize: '0.94rem', fontWeight: 700, color: '#0A0F1D', marginTop: '0.15rem' }}>
                   13,500L – 45,000L Articulated Tankers
@@ -620,12 +421,12 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
             <div className="hero-metric-item" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.85rem' }}>
               <div
                 style={{
-                  padding: '0.65rem',
-                  backgroundColor: '#FFF7ED',
-                  borderRadius: '9999px',
-                  color: '#E05A1B',
-                  border: '1px solid #FFEDD5',
-                  boxShadow: '0 1px 3px rgba(224, 90, 27, 0.12)',
+                  padding: '0.6rem',
+                  backgroundColor: '#FFFFFF',
+                  borderRadius: '4px',
+                  color: '#0A0F1D',
+                  border: '1px solid #CBD5E1',
+                  boxShadow: '0 1px 2px rgba(0,0,0,0.04)',
                 }}
               >
                 <Zap size={18} />
@@ -641,7 +442,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreOperations, onContactDispat
                     fontWeight: 600,
                   }}
                 >
-                  HEAVY STANDBY POWER
+                  STANDBY &amp; PRIME POWER
                 </div>
                 <div style={{ fontSize: '0.94rem', fontWeight: 700, color: '#0A0F1D', marginTop: '0.15rem' }}>
                   20 kVA to 1,500 kVA Synchronized Sets

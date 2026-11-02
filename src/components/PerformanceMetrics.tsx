@@ -187,7 +187,7 @@ export const PerformanceMetrics: React.FC = () => {
             >
               <div>
                 <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#64748B', fontWeight: 600, marginBottom: '1.25rem' }}>
-                  SPEC // 0{idx + 1}
+                  BENCHMARK 0{idx + 1}
                 </div>
                 
                 {/* Metric Large Value with Live GSAP Counter */}

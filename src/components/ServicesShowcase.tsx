@@ -71,7 +71,7 @@ export const ServicesShowcase: React.FC<ServicesProps> = ({ onContactDispatch })
           >
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', marginBottom: '1rem' }}>
-                <span className="editorial-num">SERVICE // 01</span>
+                <span className="editorial-num">CAPABILITY 01</span>
                 <span style={{ height: '1px', width: '32px', backgroundColor: '#CBD5E1' }}></span>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#64748B', textTransform: 'uppercase', fontWeight: 600 }}>
                   Petroleum Logistics
@@ -206,7 +206,7 @@ export const ServicesShowcase: React.FC<ServicesProps> = ({ onContactDispatch })
 
             <div style={{ order: 1 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', marginBottom: '1rem' }}>
-                <span className="editorial-num">SERVICE // 02</span>
+                <span className="editorial-num">CAPABILITY 02</span>
                 <span style={{ height: '1px', width: '32px', backgroundColor: '#CBD5E1' }}></span>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#64748B', textTransform: 'uppercase', fontWeight: 600 }}>
                   Standby Power Systems
@@ -264,7 +264,7 @@ export const ServicesShowcase: React.FC<ServicesProps> = ({ onContactDispatch })
           >
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', marginBottom: '1rem' }}>
-                <span className="editorial-num">SERVICE // 03</span>
+                <span className="editorial-num">CAPABILITY 03</span>
                 <span style={{ height: '1px', width: '32px', backgroundColor: '#CBD5E1' }}></span>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#64748B', textTransform: 'uppercase', fontWeight: 600 }}>
                   Storage Infrastructure
@@ -359,7 +359,7 @@ export const ServicesShowcase: React.FC<ServicesProps> = ({ onContactDispatch })
           >
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', marginBottom: '1rem' }}>
-                <span className="editorial-num">SERVICE // 04</span>
+                <span className="editorial-num">CAPABILITY 04</span>
                 <span style={{ height: '1px', width: '32px', backgroundColor: '#CBD5E1' }}></span>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#64748B', textTransform: 'uppercase', fontWeight: 600 }}>
                   Critical Logistics
