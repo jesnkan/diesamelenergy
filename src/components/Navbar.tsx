@@ -51,7 +51,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            height: '84px',
+            height: '92px',
           }}
         >
           {/* Brand Logo */}
@@ -61,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
               alt="Diesamel Energy Ltd."
               className="navbar-logo"
               style={{
-                height: '68px',
+                height: '80px',
                 width: 'auto',
                 objectFit: 'contain',
                 display: 'block',
@@ -229,10 +229,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
             display: inline-flex !important;
           }
           .navbar-inner {
-            height: 72px !important;
+            height: 76px !important;
           }
           .navbar-logo {
-            height: 52px !important;
+            height: 60px !important;
           }
         }
       `}</style>
