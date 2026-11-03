@@ -78,40 +78,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
         <div className="de-container-wide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '76px' }}>
           
           {/* Brand Logo */}
-          <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', textDecoration: 'none' }}>
+          <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
             <img
               src="/images/DIESAMEL.png"
-              alt="Diesamel Energy Ltd. Logo"
+              alt="Diesamel Energy Ltd."
               style={{
-                height: '46px',
+                height: '48px',
                 width: 'auto',
                 objectFit: 'contain',
                 display: 'block',
               }}
             />
-            <div>
-              <div style={{
-                fontFamily: 'var(--font-sans)',
-                fontWeight: 800,
-                fontSize: '1.25rem',
-                letterSpacing: '-0.02em',
-                lineHeight: 1,
-                color: '#0A0F1D',
-              }}>
-                DIESAMEL
-              </div>
-              <div style={{
-                fontFamily: 'var(--font-mono)',
-                fontSize: '0.62rem',
-                letterSpacing: '0.16em',
-                color: '#64748B',
-                fontWeight: 700,
-                marginTop: '0.2rem',
-                textTransform: 'uppercase'
-              }}>
-                Energy Ltd. • Ho, Ghana
-              </div>
-            </div>
           </a>
 
           {/* Desktop Navigation Links (Floating Dark Charcoal Pill matching inspiration) */}

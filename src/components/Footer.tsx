@@ -20,25 +20,17 @@ export const Footer: React.FC = () => {
         >
           {/* Brand Column */}
           <div style={{ maxWidth: '380px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', marginBottom: '1.25rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1.25rem' }}>
               <img
                 src="/images/DIESAMEL.png"
-                alt="Diesamel Energy Ltd. Logo"
+                alt="Diesamel Energy Ltd."
                 style={{
-                  height: '46px',
+                  height: '48px',
                   width: 'auto',
                   objectFit: 'contain',
                   display: 'block',
                 }}
               />
-              <div>
-                <div style={{ fontFamily: 'var(--font-sans)', fontWeight: 800, fontSize: '1.25rem', letterSpacing: '-0.02em', color: '#0A0F1D' }}>
-                  DIESAMEL
-                </div>
-                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', letterSpacing: '0.16em', color: '#64748B', fontWeight: 700, textTransform: 'uppercase' }}>
-                  ENERGY LTD.
-                </div>
-              </div>
             </div>
 
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1.05rem', fontWeight: 700, color: '#0A0F1D', lineHeight: 1.4, marginBottom: '0.85rem' }}>
