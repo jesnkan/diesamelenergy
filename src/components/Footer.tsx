@@ -22,11 +22,10 @@ export const Footer: React.FC = () => {
           <div style={{ maxWidth: '380px' }}>
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1.25rem' }}>
               <img
-                src="/images/DIESAMEL.png"
+                src="/images/DIESAMEL-cropped.png"
                 alt="Diesamel Energy Ltd."
                 style={{
-                  height: '70px',
-                  maxHeight: '70px',
+                  height: '56px',
                   width: 'auto',
                   objectFit: 'contain',
                   display: 'block',

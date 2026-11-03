@@ -51,17 +51,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            height: '92px',
+            height: '96px',
           }}
         >
           {/* Brand Logo */}
           <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
             <img
-              src="/images/DIESAMEL.png"
+              src="/images/DIESAMEL-cropped.png"
               alt="Diesamel Energy Ltd."
               className="navbar-logo"
               style={{
-                height: '80px',
+                height: '62px',
                 width: 'auto',
                 objectFit: 'contain',
                 display: 'block',
@@ -229,10 +229,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
             display: inline-flex !important;
           }
           .navbar-inner {
-            height: 76px !important;
+            height: 80px !important;
           }
           .navbar-logo {
-            height: 60px !important;
+            height: 48px !important;
           }
         }
       `}</style>
