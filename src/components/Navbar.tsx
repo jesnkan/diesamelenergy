@@ -32,36 +32,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
 
   return (
     <>
-      {/* Top micro-ticker for operations */}
-      <div style={{
-        backgroundColor: '#F8FAFC',
-        borderBottom: '1px solid #E2E8F0',
-        fontSize: '0.74rem',
-        padding: '0.4rem 0',
-        color: '#475569',
-        fontFamily: 'var(--font-mono)'
-      }}>
-        <div className="de-container-wide" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', color: '#0F172A', fontWeight: 600 }}>
-              <span style={{ width: '7px', height: '7px', borderRadius: '50%', backgroundColor: '#16a34a', display: 'inline-block' }}></span>
-              FLEET DISPATCH: 24/7/365 ACTIVE
-            </span>
-            <span style={{ display: 'none', color: '#64748B' }} className="desktop-indicator">
-              HQ: Commercial Industrial Corridor, Ho, Volta Region
-            </span>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
-            <span style={{ color: '#475569' }}>
-              General Contact Line: <a href="tel:+233262381017" style={{ color: '#0F172A', fontWeight: 700, textDecoration: 'none' }}>+233 26 238 1017</a>
-            </span>
-            <span style={{ fontSize: '0.68rem', padding: '0.15rem 0.6rem', backgroundColor: '#FFF7ED', border: '1px solid #FFEDD5', borderRadius: '9999px', color: '#E05A1B', fontWeight: 700 }}>
-              OFFICIAL LINE
-            </span>
-          </div>
-        </div>
-      </div>
-
       {/* Main Navigation Bar */}
       <header
         style={{
@@ -75,16 +45,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
           boxShadow: scrolled ? '0 4px 20px rgba(0, 0, 0, 0.05)' : 'none',
         }}
       >
-        <div className="de-container-wide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '88px' }}>
-          
+        <div
+          className="de-container-wide navbar-inner"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            height: '84px',
+          }}
+        >
           {/* Brand Logo */}
           <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
             <img
               src="/images/DIESAMEL.png"
               alt="Diesamel Energy Ltd."
+              className="navbar-logo"
               style={{
-                height: '74px',
-                maxHeight: '74px',
+                height: '68px',
                 width: 'auto',
                 objectFit: 'contain',
                 display: 'block',
@@ -141,9 +118,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
 
           {/* Action CTAs */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            {/* Desktop Only CTA: Hidden on mobile to avoid clutter */}
             <button
               onClick={onExploreOperations}
-              className="btn-primary"
+              className="btn-primary desktop-cta-btn"
               style={{
                 padding: '0.62rem 1.45rem',
                 fontSize: '0.82rem',
@@ -162,15 +140,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
               aria-label="Toggle navigation menu"
               style={{
                 display: 'none',
-                background: '#FFFFFF',
+                background: '#F8FAFC',
                 border: '1px solid #CBD5E1',
-                borderRadius: '3px',
-                padding: '0.55rem',
+                borderRadius: '6px',
+                padding: '0.6rem',
                 color: '#0A0F1D',
-                cursor: 'pointer'
+                cursor: 'pointer',
               }}
             >
-              {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
@@ -203,7 +181,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
                         textDecoration: 'none',
                         display: 'block',
                         padding: '0.5rem 0',
-                        borderBottom: '1px solid #F1F5F9'
+                        borderBottom: '1px solid #F1F5F9',
                       }}
                     >
                       {link.name}
@@ -213,31 +191,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
               </ul>
             </nav>
 
-            <div style={{
-              marginTop: '0.5rem',
-              padding: '1.1rem',
-              backgroundColor: '#F8FAFC',
-              borderRadius: '3px',
-              border: '1px solid #E2E8F0',
-              fontSize: '0.82rem',
-              color: '#475569'
-            }}>
-              <div style={{ fontWeight: 700, color: '#0A0F1D', marginBottom: '0.4rem', fontFamily: 'var(--font-mono)' }}>
-                DISPATCH COORDINATION
-              </div>
-              <div>Ho Industrial Corridor • Near UHAS Road Junction</div>
-              <div style={{ marginTop: '0.4rem', color: '#0A0F1D', fontWeight: 600 }}>dispatch@diesamelenergy.com</div>
-              <div style={{ marginTop: '0.2rem', color: '#0A0F1D', fontWeight: 700 }}>Tel: +233 26 238 1017</div>
-              <div style={{ marginTop: '0.2rem' }}>Fleet Ops: 24/7/365 active</div>
-            </div>
-
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 onExploreOperations();
               }}
               className="btn-primary"
-              style={{ width: '100%', textAlign: 'center', justifyContent: 'center' }}
+              style={{ width: '100%', textAlign: 'center', justifyContent: 'center', padding: '0.9rem', fontSize: '0.9rem' }}
             >
               EXPLORE OPERATIONS
             </button>
@@ -251,16 +211,28 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
           .desktop-nav {
             display: block !important;
           }
-          .desktop-indicator {
-            display: inline-block !important;
+          .desktop-cta-btn {
+            display: inline-flex !important;
           }
           .mobile-menu-btn {
             display: none !important;
           }
         }
         @media (max-width: 991px) {
+          .desktop-nav {
+            display: none !important;
+          }
+          .desktop-cta-btn {
+            display: none !important;
+          }
           .mobile-menu-btn {
             display: inline-flex !important;
+          }
+          .navbar-inner {
+            height: 72px !important;
+          }
+          .navbar-logo {
+            height: 52px !important;
           }
         }
       `}</style>
