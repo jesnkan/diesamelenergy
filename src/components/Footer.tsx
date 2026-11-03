@@ -25,7 +25,8 @@ export const Footer: React.FC = () => {
                 src="/images/DIESAMEL.png"
                 alt="Diesamel Energy Ltd."
                 style={{
-                  height: '48px',
+                  height: '70px',
+                  maxHeight: '70px',
                   width: 'auto',
                   objectFit: 'contain',
                   display: 'block',

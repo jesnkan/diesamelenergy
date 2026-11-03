@@ -69,13 +69,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
           top: 0,
           zIndex: 90,
           transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-          backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.97)' : '#FFFFFF',
+          backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.98)' : '#FFFFFF',
           backdropFilter: 'blur(16px)',
           borderBottom: '1px solid #E2E8F0',
           boxShadow: scrolled ? '0 4px 20px rgba(0, 0, 0, 0.05)' : 'none',
         }}
       >
-        <div className="de-container-wide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '76px' }}>
+        <div className="de-container-wide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '88px' }}>
           
           {/* Brand Logo */}
           <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
@@ -83,11 +83,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreOperations }) => {
               src="/images/DIESAMEL.png"
               alt="Diesamel Energy Ltd."
               style={{
-                height: '48px',
+                height: '74px',
+                maxHeight: '74px',
                 width: 'auto',
                 objectFit: 'contain',
                 display: 'block',
+                transition: 'transform 0.2s ease',
               }}
+              onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
+              onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
             />
           </a>
 
